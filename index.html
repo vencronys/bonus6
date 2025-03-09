@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/0197b6ebf2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="header"></div>
+
+    <div class="hourly-container"></div>
+
+    <div class="daily-container"></div>
+
+    <div class="footer">
+      <div>
+        <p>Sunrise</p>
+        <p id="sunrise">07:38</p>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+      <div>
+        <p>Sunset</p>
+        <p id="sunset">18:04</p>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => console.log("Service Worker Registered"))
+          .catch((error) =>
+            console.log("Service Worker Registration Failed", error)
+          );
+      }
+    </script>
+  </body>
+</html>
