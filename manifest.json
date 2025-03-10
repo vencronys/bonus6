@@ -2,7 +2,7 @@
   "name": "TP Weather App",
   "short_name": "Weather",
   "description": "My humble attempt to get a +6 in the exam, doing this at midnight btw",
-  "start_url": "/index.html",
+  "start_url": "/bonus6/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",

@@ -1,11 +1,13 @@
 const CACHE_NAME = "pwa-cache-v1";
+const baseURL = "/bonus6"; // Prefix with repository name
+
 const URLS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/script.js",
-  "/icons/icons8-weather-192.png",
-  "/icons/icons8-weather-512.png",
+  `${baseURL}/`, // Updated path to root
+  `${baseURL}/index.html`, // Update path to index.html
+  `${baseURL}/style.css`, // Update path to style.css
+  `${baseURL}/script.js`, // Update path to script.js
+  `${baseURL}/icons/icons8-weather-192.png`, // Update path to icon
+  `${baseURL}/icons/icons8-weather-512.png`, // Update path to icon
 ];
 
 // Install Service Worker and cache files
