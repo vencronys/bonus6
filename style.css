@@ -5,13 +5,12 @@
 }
 
 html {
-  background-color: #f4f4f4;
+  background: linear-gradient(180deg, #bbe0f8 0%, #a6cef9 100%);
   color: #fff;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(180deg, #bbe0f8 0%, #a6cef9 100%);
   display: flex;
   flex-direction: column;
   flex-direction: column;
@@ -137,4 +136,17 @@ ul {
   font-size: 3rem;
   position: absolute;
   bottom: -17px;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading-screen {
+    position: fixed; /* Fix it on top of the body */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional, semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Keep it on top */
 }

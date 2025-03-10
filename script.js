@@ -106,21 +106,29 @@ function renderWeatherData() {
   }°</p>
     <p>${weatherData.current.day}, ${weatherData.current.time}</p>
   `;
+  currentWeatherEl.classList.remove("hidden");
 
   const hourlyContainer = document.querySelector(".hourly-container");
   hourlyContainer.innerHTML = "";
+  hourlyContainer.classList.remove("hidden");
   weatherData.hourly.forEach((hourlyData) => {
     hourlyContainer.appendChild(generateHourlyListItem(hourlyData));
   });
 
   const dailyContainer = document.querySelector(".daily-container");
   dailyContainer.innerHTML = "";
+  dailyContainer.classList.remove("hidden");
   weatherData.daily.forEach((dailyData, index) => {
     dailyContainer.appendChild(generateDailyListItem(dailyData, index));
   });
 
   document.querySelector("#sunrise").textContent = weatherData.current.sunrise;
   document.querySelector("#sunset").textContent = weatherData.current.sunset;
+  document.querySelector(".footer").classList.remove("hidden");
+
+  document.querySelector("#loading-screen").classList.add("hidden");
+
+
 }
 
 // ----- FETCH WEATHER DATA -----
