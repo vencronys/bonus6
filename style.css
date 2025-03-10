@@ -139,7 +139,7 @@ ul {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 #loading-screen {
